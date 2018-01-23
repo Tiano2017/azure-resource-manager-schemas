@@ -64,27 +64,6 @@ let validateTemplateWithSchema = function (file) {
 describe('validate template files with schema - ', () => {
     let files = fs.readdirSync(testFolder);
 
-    // // it.each(files, "running schema validation on '%s'", ['element'], function (element) {
-    // // 	this.timeout(5000);
-
-    // // 	validateTemplateWithSchema(element)
-    // // 	.then(
-    // // 		function(result) {
-    // // 			//assert.fail("test failed");
-    // // 			assert.deepEqual(result, [], 'test failed');
-
-    // // 			//console.log(JSON.stringify(result, null, 2));
-    // // 			//next();
-    // // 		});
-    // // 	// .then(() => testDone(), (error) => {
-    // // 	// 	testDone(error);
-    // // 	// })
-    // // 	//.catch((err) => { console.log(err); })
-    // // 	//.then(() => next());
-
-    // // 	// console.log(validateResult);
-    // // });
-
     forEach(files).it("running schema validation on '%s'", function (file, done) {
         this.timeout(5000);
 
